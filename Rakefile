@@ -6,10 +6,15 @@ desc 'drop into the Pry console'
 task :console => :environment do
   Pry.start
 end
+namespace :greeting do
 
-desc 'outputs hello to the terminal'
-task :hello do
-  puts "hello from Rake!"
+  desc 'outputs hello to the terminal'
+  task :hello do
+    puts "hello from Rake!"
+  end
+  task :hola do
+    puts "hola de rake!"
+  end
 end
 
 namespace :db do
